@@ -1,12 +1,13 @@
 variable launchpad_mode {
   default = "launchpad_light"
   type = string
-  
+
   validation {
     condition     = contains(["launchpad_light", "launchpad"], var.launchpad_mode)
     error_message = "Allowed values are launchpad_light or launchpad."
   }
 }
+
 
 variable level {
   default = "level0"
